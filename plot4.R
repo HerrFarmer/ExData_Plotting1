@@ -4,7 +4,12 @@
 library(dplyr)
 
 # Load text file
-dfDataTemp =  read.table("./downloads/Exploratory Data Analysis/exdata-data-household_power_consumption/household_power_consumption.txt", sep = ";", header = TRUE, stringsAsFactors = FALSE, na.strings=c("?","NA"), colClasses = c("character", "character", rep("numeric",7)))
+dfDataTemp =  read.table("./downloads/Exploratory Data Analysis/exdata-data-household_power_consumption/household_power_consumption.txt", 
+                         sep = ";", 
+                         header = TRUE, 
+                         stringsAsFactors = FALSE, 
+                         na.strings=c("?","NA"), 
+                         colClasses = c("character", "character", rep("numeric",7)))
 
 # Filter for required days 
 dfData = filter(dfDataTemp, Date == "1/2/2007" | Date == "2/2/2007")
