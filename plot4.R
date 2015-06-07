@@ -21,15 +21,15 @@ rm(dfDataTemp)
 dfData$DateTime = strptime(paste(dfData$Date, dfData$Time), "%d/%m/%Y %H:%M:%S")
 
 # Open PNG device
-png(filename = "plot4.png",width = 480, height = 480, units = "px", bg = "transparent")
+png(filename = "plot4.png",width = 480, height = 480, units = "px", bg = "white")
 
 # Set layout for plot
 par(mfrow=c(2,2))
 
-# Quandrant 1 - Global Active Power
+# Quadrant 1 - Global Active Power
 plot(dfData$DateTime, dfData$Global_active_power, type = "l", ylab = "Global Active Power", xlab = "")
 
-# Quandrant 2 - Voltage
+# Quadrant 2 - Voltage
 plot(dfData$DateTime, dfData$Voltage, type = "l", ylab = "Voltage", xlab = "datetime")
 
 # Quadrant 3 - Energy sub metering
